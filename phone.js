@@ -45,3 +45,13 @@ const searchPhone = () => {
     )
   
   }
+
+  const displayError = () => {
+    const errorText = document.getElementById('error');
+  
+    const errorMassage = document.createElement('h2');
+  
+    errorMassage.innerHTML = `<h2>Search Not Found<h2/>`;
+    errorText.appendChild(errorMassage);
+  
+  }
