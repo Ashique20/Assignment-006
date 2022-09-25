@@ -55,3 +55,12 @@ const searchPhone = () => {
     errorText.appendChild(errorMassage);
   
   }
+
+  const selectItem = (event, id) => {
+    let element = event.target.nextElementSibling;
+    // console.log("id", element);
+    fetch(`https://openapi.programming-hero.com/api/phone/${id}`)
+        .then(res => res.json())
+        .then(data => showDetails(element, data.data));
+  
+  }
