@@ -64,3 +64,16 @@ const searchPhone = () => {
         .then(data => showDetails(element, data.data));
   
   }
+
+  const showDetails = (e, data) => {
+    // console.log(e);
+    const detailsDiv = e.querySelector('.card-details');
+    console.log(detailsDiv, data);
+    detailsDiv.classList.remove('hide');
+    detailsDiv.innerHTML = `
+                <h3>Features:</h3>
+    <h4>${data.brand}</h4>
+    <h4>${data.mainFeatures.displaySize}</h4>
+    <h4>${data.releaseDate}</h4>
+        `
+  }
